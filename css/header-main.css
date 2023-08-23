@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.header-main{
+    height: 110px;
+    display: flex;
+    box-shadow: 0 0 10px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    background-color: #181717;
+}
+@media(max-width:700px){
+    .links{
+        display: none;
+    }
+    .three-dots{
+        position: absolute;
+        display: flex;
+        left: 20px;
+        width: 10px;
+    }
+    .stylish-box{
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        bottom: 0;
+    }
+}
+.header-section{
+    display: flex;
+}
+.three-dots{
+    width: 70px;
+    margin-right: 150px;
+    justify-content: space-between;
+    display: flex;
+}
+.circle1{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: red;
+    animation: ball 3s linear infinite;
+    animation-delay: 1s;
+
+}
+@keyframes ball 
+{
+    0%{
+       transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(1px);
+    }
+}
+.circle2{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: orange;
+    animation: ball 3s linear infinite;
+    animation-delay: 1.5s;
+}
+@keyframes ball 
+{
+    0%{
+       transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(1px);
+    }
+}
+.circle3{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: green;
+    animation: ball 3s linear infinite;
+    animation-delay: 2s;
+}@keyframes ball 
+{
+    0%{
+       transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(1px);
+    }
+}
+.links{
+    width: 900px;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    margin-right: 70px;
+}
+.links a:hover{
+    color: orange;
+}
+.links a::before{
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: '';
+    bottom: -15px;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .9s;
+    background: orange;
+}
+.links a:hover::before{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+.stylish-box{
+    width: 80px;
+    height: 50px;
+    border-radius: 0 0 30px 0;
+    color: black;
+    margin-left: 90px;
+    background-color: burlywood;
+    transition: 1.5s;
+    opacity: 2s;
+}    
+.stylish-box p{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    
+}
+.stylish-box:hover{
+background: #222429;
+color: white;
+}
